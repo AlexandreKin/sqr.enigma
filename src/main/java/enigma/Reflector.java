@@ -8,6 +8,7 @@ public class Reflector extends Rotor {
 	int[] reflection;
 	
 	public static Reflector reflectorFactory(String str){
+		//trim enleve les espaces au début et fin de la chaine de caractère
 		char[] s = str.trim().replace(" ", "").toCharArray();
 		int[] cipher = new int[26];
 		for (int i = 0; i< 26; i++){
@@ -20,6 +21,10 @@ public class Reflector extends Rotor {
 		super(r,0);
 		reflection = r;
 	}
+	
+	/*
+	 * Convertit le paramètre d'entrée
+	 */
         
     public int convertForward(int p) {
         return ((reflection[((p)%26+26)%26])%26+26)%26;
