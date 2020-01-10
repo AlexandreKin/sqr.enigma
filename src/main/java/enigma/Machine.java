@@ -6,6 +6,10 @@ public class Machine {
 	private Rotor middleRotor;
 	private Rotor rightRotor;
 	private Reflector reflector;
+	
+	/*
+	 * La fonction suivante détermine la position physique des rotors (le reflector est au centre par exemple)
+	 */
 
 	public void initRotors(Reflector reflector, Rotor left, Rotor middle, Rotor right) {
 		this.reflector = reflector;
@@ -13,7 +17,9 @@ public class Machine {
 		middleRotor = middle;
 		rightRotor = right;
 	}
-
+/*
+ * La fonction suivante met en place la position des rotors
+ */
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
@@ -21,6 +27,11 @@ public class Machine {
 		middleRotor.setPosition(Rotor.toIndex(charSettings[2]));
 		rightRotor.setPosition(Rotor.toIndex(charSettings[3]));
 	}
+	
+	/*
+	 * La fonction suivante configure la position initale des rotors
+	 * en fonction des paramètres de l'entrée setting ?!
+	 */
 	
 	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) {
 		this.initRotors(reflector, left, middle, right);

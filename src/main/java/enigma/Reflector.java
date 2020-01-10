@@ -3,6 +3,8 @@ package enigma;
 /** Class that represents a reflector in the enigma.
  *  @author
  */
+
+//Constructeur
 public class Reflector extends Rotor {
 	
 	int[] reflection;
@@ -23,18 +25,24 @@ public class Reflector extends Rotor {
 	}
 	
 	/*
-	 * Convertit le paramètre d'entrée
+	 * La fonction suivante renvois la conversion du paramètre d'entrée en fonction de la position
 	 */
         
     public int convertForward(int p) {
         return ((reflection[((p)%26+26)%26])%26+26)%26;
     }
 
+    /*
+     * La fonction suivante renvoie une valeur inutile
+     */
     @Override
     public int convertBackward(int unused) {
         throw new UnsupportedOperationException();
     }
 
+    /*
+     * La fonction suivante ne fais rien : le rotor ne devrait pas avancer
+     */
     @Override
     public void advance() {
     }

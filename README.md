@@ -18,12 +18,35 @@ Hereafter, for each classes give function to be tested. Remember that all functi
 
 ### Classe Machine
 #### functions
+Fonctions à tester : 
+setPositions
+Configure
+advance rotor
+ConvertChar
+Convert
+Fonctions à ne pas tester :
+aucune
 
 ### Classe Reflector
 #### functions
+Fonctions à tester : 
+reflectorFactory
+advance
+
+Fonction à ne pas tester :
+convertForward  car nous le feront dans la classe Rotor
+convertBackward car cette fonction n'est pas utilisée
 
 ### Classe Rotor
 #### functions
+Fonctions à tester : 
+RotorFactory
+convertBackward
+convertForward
+advance
+
+Fonctions à ne pas tester :
+Getpositions et setPosition car code généré automatiquement
 
 ## Tricks & tips
 

@@ -48,6 +48,9 @@ public class Rotor {
 		createBCipher();
 	}
 
+	/*
+	 * Les deux fonctions suivantes renvoient la conversion du paramètre d'entrée en fonction de la position
+	 */
     public int convertForward(int p) {
         return ((cipher[((p+position)%26+26)%26]-position)%26+26)%26;
     }
@@ -57,7 +60,7 @@ public class Rotor {
     }
     
    
-    //Permet de faire changer la position des rotors
+    //Permet de faire avancer la position du rotor de 1
     public void advance() {
         position = (position+1) % 26;
     }
